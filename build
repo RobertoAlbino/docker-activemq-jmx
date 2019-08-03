@@ -1,0 +1,2 @@
+sudo docker build -t activemq:latest . 
+sudo docker run -p 61616:61616 -p 8161:8161 -p 1616:1616 activemq:latest

@@ -447,9 +447,7 @@ invoke_status(){
 # - $ACTIVEMQ_SUNJMX_START : options for JMX settings
 # - $ACTIVEMQ_SSL_OPTS     : options for SSL encryption
 
-ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote.port=1616 -Dcom.sun.management.jmxremote.ssl=false \
--Dcom.sun.management.jmxremote.password.file=${ACTIVEMQ_BASE}/conf/jmx.password \
--Dcom.sun.management.jmxremote.access.file=${ACTIVEMQ_BASE}/conf/jmx.access"
+ACTIVEMQ_SUNJMX_START="-Dcom.sun.management.jmxremote.port=1616 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"
 
 invoke_start(){
     if ( checkRunning );then
